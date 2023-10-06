@@ -119,3 +119,24 @@ const sr = ScrollReveal({
     duration: 3500,
     distance: '200px'
   })
+
+
+/*=============== EMAIL JS ===============*/
+ const contactForm = document.getElementById('contact-form'),
+ contactMessage = document.getElementById('contact-message')
+
+ const sendEmail = (e) =>{
+ e.preventDefault()
+
+ emailjs.sendForm('service_k3r61di', 'template_vykjczo', '#contact-form', 'LetCkmSto79n2uoUG')
+
+   .then(() =>{
+     contactMessage.textContent = 'Message sent succesfully ✅'
+     alert("Message sent succesfully");
+   }, () =>{
+     contactMessage.textContent = 'Message not sent (service error) ❌'
+     alert("Message not sent succesfully (service error)");
+   })
+ }
+
+ contactForm.addEventListener('submit', sendEmail)
