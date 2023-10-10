@@ -114,12 +114,6 @@ const sr = ScrollReveal({
     origin: 'right',
   })
 
-  sr.reveal(`.car`,{
-    origin: 'right',
-    duration: 3500,
-    distance: '200px'
-  })
-
 
 /*=============== EMAIL JS ===============*/
  const contactForm = document.getElementById('contact-form'),
